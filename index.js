@@ -57,20 +57,13 @@ new Marker([39.909176, 116.397411], {
 new CircleMarker([39.909186, 116.407411]).addTo(map);
 
 // 线
-new Polyline(
-  [
-    [39.909186, 116.457411],
-    [39.999186, 116.507411],
-  ],
-  {
-    stroke: false,
-    fillColor: 'red',
-    fillOpacity: 1,
-  }
-).addTo(map);
+new Polyline([
+  [39.909186, 116.457411],
+  [39.999186, 116.507411],
+]).addTo(map);
 
 // 面
-new Polygon(
+const g1 = new Polygon(
   [
     [39.899186, 116.407411],
     [39.899186, 116.427411],
@@ -82,4 +75,21 @@ new Polygon(
     fillColor: 'pink',
     fillOpacity: 1,
   }
-).addTo(map);
+);
+g1.addTo(map);
+
+// 面
+const g2 = new Polygon(
+  [
+    [39.919186, 116.416411],
+    [39.919186, 116.446411],
+    [39.899186, 116.446411],
+    [39.899186, 116.416411],
+  ],
+  {
+    stroke: false,
+    fillColor: 'red',
+    fillOpacity: 1,
+  }
+);
+g2.addTo(map);
