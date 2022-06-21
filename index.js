@@ -97,4 +97,4 @@ const g2 = new Polygon(
   }
 );
 g2.addTo(map);
-g1.bringToFront();
+// g1.bringToFront();
