@@ -52,8 +52,7 @@ new Marker([39.909176, 116.397411], {
     iconAnchor: [12, 41],
   }),
 }).addTo(map);
-map.createPane('myPane');
-map.getPane('myPane').style.zIndex = 401;
+
 // 点
 new CircleMarker([39.909186, 116.407411]).addTo(map);
 
@@ -62,6 +61,9 @@ new Polyline([
   [39.909186, 116.457411],
   [39.999186, 116.507411],
 ]).addTo(map);
+
+map.createPane('myPane');
+map.getPane('myPane').style.zIndex = 401;
 
 // 面
 const g1 = new Polygon(
@@ -75,7 +77,7 @@ const g1 = new Polygon(
     stroke: false,
     fillColor: 'pink',
     fillOpacity: 1,
-    pane:'myPane',
+    pane: 'myPane',
   }
 );
 g1.addTo(map);
